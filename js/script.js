@@ -3,16 +3,20 @@ var i = 0;
 
 let header = document.querySelector('.main-head');
 
-// if(confirm("Gostaria de receber promoções e pacotes de viagem?")){
-//     let email = prompt("Nos informe seu email");
-
-//     if(email !== null){
-//         alert("Email cadastrado com sucesso");
-//     } else{
-//         alert("Campo Vazio")
-//     }
+setTimeout(() => {
+    if(confirm("Gostaria de receber promoções e pacotes de viagem?")){
+        let email = prompt("Nos informe seu email");
     
-// }
+        if(email !== null){
+            alert("Email cadastrado com sucesso");
+        } else{
+            alert("Campo Vazio")
+        }
+        
+    }
+}, 1000);
+
+
 
 
 let mudarCorHeader = function(){
@@ -22,4 +26,4 @@ let mudarCorHeader = function(){
     i = (i + 1) % cor.length;
 }
 
-// setInterval(mudarCorHeader, 1000);
+setInterval(mudarCorHeader, 2000);
