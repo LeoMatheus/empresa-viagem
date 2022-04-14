@@ -10,7 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=Pattaya&family=Poppins:wght@400;500&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style/style.css" />
+    <link rel="stylesheet" href="style/style-reserva.css" />
     <meta
       name="description"
       content="Travelly is a travel agency website that helps you pick out your holiday or vacation"
@@ -31,10 +31,9 @@
         </ul>
       </nav>
     </header>
-    <main>
-    <button class="show-modal">Show modal 1</button>
-    <button class="show-modal">Show modal 2</button>
-    <button class="show-modal">Show modal 3</button>
+    <main class="booking">
+    <button class="show-modal">Agendar</button>
+    
 
     <div class="modal hidden">
       <button class="close-modal">&times;</button>
@@ -42,14 +41,21 @@
         <header class="form-head">
           <h2>Contact Us</h2>
         </header>
-        <form action="https://formspree.io/f/xleaywzo" method="POST">
+        <form method="get">
           <div class="name-form">
             <label for="name">Nome:</label
             ><input id="name" type="text" name="name" required />
           </div>
-          <div class="email-form">
-            <label for="email">Email:</label
-            ><input id="email" type="email" name="_replyto" required />
+          
+         
+          <div class="date-form">
+            <label for="date_start">De: </label>
+            <input type="date" name="date_start" id="date">
+          </div>
+         
+          <div class="date-form">
+            <label for="date_end">Até: </label>
+            <input type="date" name="date_end" id="date">
           </div>
           <button type="submit" value="Send">Submit</button>
         </form>
