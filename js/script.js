@@ -1,5 +1,5 @@
 'use strict';
-var i = 0;
+
 
 let header = document.querySelector('.main-head');
 
@@ -24,10 +24,11 @@ setTimeout(() => {
 
 
 let mudarCorHeader = function(){
-    let cor = ["#6A9CD9", "#B0C5DF", "#474F59", "#5177A6"];
-
-    header.style.backgroundColor = cor[i];
-    i = (i + 1) % cor.length;
+    let cores = ["#6A9CD9", "#B0C5DF", "#474F59", "#5177A6"];
+    
+    let i = Math.floor(Math.random() * cores.length);
+   
+    header.style.backgroundColor = cores[i];
 }
 
 setInterval(mudarCorHeader, 2000);
