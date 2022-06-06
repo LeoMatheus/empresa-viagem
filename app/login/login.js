@@ -15,9 +15,9 @@ function initializeUsers() {
 }
 
 function showOperations() {
-  let isLoggedIn = localStorage.getItem(LOGGED_IN_KEY);
+  let isLoggedIn = JSON.parse(localStorage.getItem(LOGGED_IN_KEY));
 
-  if (isLoggedIn === "true") {
+  if (isLoggedIn === true) {
     window.open("../reservas/reservas.html", "_SELF");
   }
 }
@@ -39,10 +39,10 @@ window.onload = function () {
       window.open("../reservas/reservas.html", "_SELF");
     } else {
       if (username.trim().length === 0 || password.trim().length === 0) {
-        alertify.error("Os campos são de preenchimento obrigatório!");
+        alert("Os campos são de preenchimento obrigatório!");
       } else {
         window.setTimeout(() => {
-          alertify.alert(
+          alert(
             "Oppsss!",
             "Por favor, verifique seu nome de usuário ou senha e tente novamente!"
           );
