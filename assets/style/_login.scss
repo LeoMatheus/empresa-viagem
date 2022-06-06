@@ -1,0 +1,23 @@
+.hero-login {
+  min-height: 80vh;
+}
+
+.login-form {
+  background: rgba(29, 40, 63, 0.664);
+  width: 100%;
+  color: white;
+
+  label {
+    margin: 0rem 3rem;
+  }
+
+  button {
+    width: 100%;
+    padding: 2rem;
+    margin-top: 8rem;
+  }
+
+  input {
+    padding: 1rem 3rem;
+  }
+}

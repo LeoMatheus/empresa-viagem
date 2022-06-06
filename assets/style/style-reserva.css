@@ -1,0 +1,315 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+h1 {
+  font-size: 2.6rem;
+}
+
+li,
+button,
+label,
+input,
+p {
+  font-size: 2rem;
+}
+
+li {
+  list-style-type: none;
+}
+
+h2 {
+  font-size: 4.8rem;
+}
+
+h3 {
+  font-size: 3rem;
+  font-weight: 400;
+}
+
+h4,
+h5 {
+  font-size: 2.8rem;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+button {
+  padding: 2rem 6rem;
+  background: #4c6e97;
+  border: none;
+  color: white;
+  font-size: 1.8rem;
+  cursor: pointer;
+  -webkit-transition: background 0.5s ease-in-out;
+  transition: background 0.5s ease-in-out;
+}
+
+button:hover {
+  background-color: #27394e;
+}
+
+button:focus {
+  background: #0c131a;
+  outline-style: solid;
+  outline-color: white;
+}
+
+.booking {
+  min-height: 75vh;
+}
+
+.main-head {
+  background: #131c27;
+  color: white;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 3;
+}
+
+nav {
+  min-height: 10vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 90%;
+  margin: auto;
+  padding: 2rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 40rem;
+          flex: 1 1 40rem;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  list-style: none;
+}
+
+#logo {
+  -webkit-box-flex: 2;
+      -ms-flex: 2 1 40rem;
+          flex: 2 1 40rem;
+  font-family: "Pattaya", sans-serif;
+  font-weight: 400;
+}
+
+.link {
+  background: #131c27;
+}
+
+.link ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 40rem;
+          flex: 1 1 40rem;
+}
+
+.link ul li {
+  padding: 1rem;
+}
+
+footer {
+  color: white;
+  background: #131c27;
+}
+
+footer ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 40rem;
+          flex: 1 1 40rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+footer h5 {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 40rem;
+          flex: 1 1 40rem;
+}
+
+.footer-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 2rem;
+  width: 90%;
+  margin: auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 10vh;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.form-wrapper {
+  background: rgba(29, 40, 63, 0.664);
+  width: 100%;
+  color: white;
+  border-radius: 20px;
+}
+
+.form-wrapper label {
+  margin: 0rem 3rem;
+}
+
+.form-wrapper button {
+  width: 100%;
+  padding: 2rem;
+  margin-top: 8rem;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.form-wrapper input {
+  padding: 1rem 3rem;
+}
+
+.form-head {
+  text-align: center;
+  padding: 3.4rem;
+}
+
+.number-people-form,
+.city-form,
+.date-form {
+  padding: 3rem;
+  text-align: center;
+}
+
+.number-people-form input {
+  width: 10%;
+}
+
+.show-modal {
+  font-size: 2rem;
+  font-weight: 600;
+  padding: 1.75rem 3.5rem;
+  margin: 2rem;
+  border: none;
+  background-color: #fff;
+  color: #444;
+  cursor: pointer;
+}
+
+.close-modal {
+  position: relative;
+  top: -50%;
+  left: 90%;
+  font-size: 5rem;
+  color: #333;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.hidden {
+  display: none;
+}
+
+.modal {
+  background-color: white;
+}
+
+.tickets {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.tickets h1 {
+  font-size: 5rem;
+  padding: 10px;
+}
+
+.tickets h2 {
+  font-size: 4rem;
+  padding-bottom: 15px;
+}
+
+.tickets p {
+  font-size: 2rem;
+}
+
+.card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 25rem;
+          flex: 1 1 25rem;
+  min-height: 15vh;
+  margin: 2rem 5rem;
+  background: rgba(226, 94, 94, 0.781);
+  -webkit-box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+
+.hero-login {
+  min-height: 80vh;
+}
+
+.login-form {
+  background: rgba(29, 40, 63, 0.664);
+  width: 100%;
+  color: white;
+}
+
+.login-form label {
+  margin: 0rem 3rem;
+}
+
+.login-form button {
+  width: 100%;
+  padding: 2rem;
+  margin-top: 8rem;
+}
+
+.login-form input {
+  padding: 1rem 3rem;
+}
+/*# sourceMappingURL=style-reserva.css.map */
