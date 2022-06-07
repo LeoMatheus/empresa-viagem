@@ -1,9 +1,9 @@
-"use strict";
+'use strict';
 
-let header = document.querySelector(".main-head");
+let header = document.querySelector('.main-head');
 
 function welcome() {
-  window.alert("Seja bem vindo ao nosso site");
+  window.alert('Seja bem vindo ao nosso site');
 }
 
 // setTimeout(() => {
@@ -19,7 +19,7 @@ function welcome() {
 // }, 1000);
 
 let mudarCorHeader = function () {
-  let cores = ["#6A9CD9", "#B0C5DF", "#474F59", "#5177A6"];
+  let cores = ['#6A9CD9', '#B0C5DF', '#474F59', '#5177A6'];
 
   let i = Math.floor(Math.random() * cores.length);
 

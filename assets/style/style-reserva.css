@@ -259,12 +259,13 @@ footer h5 {
 }
 
 .tickets h2 {
-  font-size: 4rem;
+  font-size: 3rem;
   padding-bottom: 15px;
 }
 
 .tickets p {
   font-size: 2rem;
+  padding: 0.3rem;
 }
 
 .card {
@@ -287,6 +288,11 @@ footer h5 {
   -webkit-box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.3);
           box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
+}
+
+.select-btn {
+  padding: 1rem 3rem;
+  text-align: center;
 }
 
 .hero-login {
