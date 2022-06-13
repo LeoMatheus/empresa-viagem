@@ -60,7 +60,7 @@ function displayHorarioItinerario() {
 function onSubmitTicket(e) {
   e.preventDefault();
 
-  let nome = document.getElementById('nome').value;
+  let nome = nomeVar.value;
   let cpf = document.getElementById('cpf').value;
   let poltrona = document.getElementById('poltrona').value;
   let valor = document.getElementById('valor').value;
@@ -72,6 +72,8 @@ function onSubmitTicket(e) {
   tickets = tickets === null ? [] : tickets;
   tickets.push(ticket);
   localStorage.setItem(TICKETS_KEY, JSON.stringify(tickets));
+
+  showTickets();
 }
 
 function showTickets() {

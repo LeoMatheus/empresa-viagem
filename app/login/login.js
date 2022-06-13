@@ -22,7 +22,7 @@ function showOperations() {
   const isLoggedIn = JSON.parse(localStorage.getItem(LOGGED_IN_KEY));
 
   if (isLoggedIn === true) {
-    window.open('../reservas/itinerario.html', '_SELF');
+    window.open('app/reservas/itinerario.html', '_SELF');
   }
 }
 
@@ -40,7 +40,7 @@ window.onload = function () {
 
     if (username === user.username && password === user.password) {
       localStorage.setItem(LOGGED_IN_KEY, true);
-      window.open('../reservas/itinerario.html', '_SELF');
+      window.open('app/reservas/itinerario.html', '_SELF');
     } else {
       if (username.trim().length === 0 || password.trim().length === 0) {
         alert('Os campos são de preenchimento obrigatório!');

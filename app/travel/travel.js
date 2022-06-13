@@ -28,11 +28,11 @@ function onSubmitItinerary(e) {
 }
 
 function showTickets() {
-  function listItinerary(element) {
+  let listItinerary = (element) => {
     for (const i of itinerarys) {
       if (element === i.id) return `${i.origem} - ${i.destino}`;
     }
-  }
+  };
   let cardBuffer = '';
 
   for (const e of travels) {

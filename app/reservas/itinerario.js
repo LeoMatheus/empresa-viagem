@@ -24,12 +24,17 @@
       cardBuffer += card;
     }
     ticketHolder.innerHTML = cardBuffer;
+    ticketHolder.onclick = function (e) {
+      console.log(e.target.parentElement);
+      // e.target.parentElement.style.backgroundColor = '#60b347';
+      $(e.target).parent('div').css('backgroundColor', '#60b347');
+    };
   }
 
   function onSubmitItinerary(e) {
     e.preventDefault();
 
-    let origem = document.getElementById('city-departure').value;
+    let origem = document.getElementsByName('city-departure')[0].value;
     let destino = document.querySelector('#city-arrive').value;
 
     let itinerary = new Itinerario(origem, destino);
