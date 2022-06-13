@@ -10,7 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=Pattaya&family=Poppins:wght@400;500&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="/assets/style/style-reserva.css" />
+    <link rel="stylesheet" href="assets/style/style-reserva.css" />
     <meta
       name="description"
       content="Travelly is a travel agency website that helps you pick out your holiday or vacation"
@@ -18,24 +18,26 @@
     <meta name="robots" content="index,follow" />
     <link rel="icon" href="icons/airplane.svg" />
     <title>Travelly | Travelling Agency</title>
+    <base href="/empresa-viagem/">
+    <!-- <base href="/"> -->
   </head>
 
   <body>
     <header class="main-head">
       <nav>
-        <h1 id="logo"><a href="../index.html">Travelly</a></h1>
+        <h1 id="logo"><a href="index.html">Travelly</a></h1>
         
       </nav>
     </header>
     <header class="link">
       <ul>
-        <li><a href="../reservas/reservas.html">Rota</a></li>
-        <li><a href="../travel/travel.html">Horario</a></li>
-        <li><a href="../ticket/ticket.html">Ingresso</a></li>
+        <li><a href="reservas/itinerario.html">Rota</a></li>
+        <li><a href="travel/travel.html">Horario</a></li>
+        <li><a href="ticket/ticket.html">Ingresso</a></li>
       </ul>
     </header>
     <main class="booking">
-    <button class="show-modal">Criar Rota</button>
+    <button class="show-modal">Criar Ticket</button>
     
       <!-- 
         Validação browser
@@ -43,25 +45,38 @@
         validação costumizada
 
       -->
-    <div class="itModal hidden">
+    <div class="modal hidden">
       <button class="close-modal">&times;</button>
       <div class="form-wrapper">
         <header class="form-head">
-          <h2>Criar Rota</h2>
+          <h2>Criar Ticket</h2>
         </header>
         <form method="get">
-          <div class="city-form">
-            <label for="city">Cidade origem:</label
-            ><input id="city-departure" type="text" name="city-departure" required />
+          <div class="form-field">
+            <label for="city"> Nome:</label
+            ><input id="nome" type="text" name="nome" required />
           </div>
           
-          <div class="city-form">
-            <label for="city">Cidade destino:</label
-            ><input id="city-arrive" type="text" name="city-arrive" required />
+          <div class="form-field">
+            <label for="city">CPF:</label
+            ><input id="cpf" type="text" name="cpf" required />
+          </div>
+          
+          <div class="form-field">
+            <label for="city">poltrona:</label
+            ><input id="poltrona" type="number" min="1" name="poltrona" required />
+          </div>
+         
+          <div class="form-field">
+            <label for="city">valor:</label
+            ><input id="valor" type="number" min="1" step="any" name="valor" required />
           </div>
 
-         
-      
+          <div class="form-field">
+            <label for="travel-select">Horario e Itinerario:</label
+              ><select name="horarioItinerario" id="travel-select">
+              </select>
+          </div>
 
           <button type="submit" value="Send">Submit</button>
         </form>
@@ -71,6 +86,7 @@
    
    
   </main>
+  <h1 class="cardTitle">Ticket</h1>
   <div class="tickets">
     <h1>Tickets</h1>
   </div>
@@ -81,26 +97,27 @@
         <ul>
           <li>
             <a href="#" title="twitter-link"
-              ><img src="/assets/icons/twitter.svg" alt="tiwtter-link"
+              ><img src="assets/icons/twitter.svg" alt="tiwtter-link"
             /></a>
           </li>
           <li>
             <a href="#" title="youtube-link"
-              ><img src="/assets/icons/youtube.svg" alt="youtube-link"
+              ><img src="assets/icons/youtube.svg" alt="youtube-link"
             /></a>
           </li>
           <li>
             <a href="#" title="instagram-link"
-              ><img src="/assets/icons/instagram.svg" alt="instagram-link"
+              ><img src="assets/icons/instagram.svg" alt="instagram-link"
             /></a>
           </li>
         </ul>
       </div>
     </footer>
   </main>
-  <script src="/app/model/itinerario.js"></script>
-  <script src="/app/model/ticket.js"></script>
-  <script src="/app/shared/constants.js"></script>
+  <script src="app/model/itinerario.js"></script>
+  <script src="app/model/ticket.js"></script>
+  <script src="app/shared/constants.js"></script>
+  <script src="ticket.js"></script>
   
 </body>
 </html>

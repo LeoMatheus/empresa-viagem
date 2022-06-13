@@ -69,6 +69,18 @@ button:focus {
   outline-color: white;
 }
 
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
 .booking {
   min-height: 75vh;
 }
@@ -293,6 +305,18 @@ footer h5 {
 .select-btn {
   padding: 1rem 3rem;
   text-align: center;
+}
+
+.form-field {
+  padding: 3rem;
+  text-align: center;
+}
+
+.cardTitle {
+  background: #a9d9ec;
+  text-align: center;
+  font-size: 8rem;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .hero-login {

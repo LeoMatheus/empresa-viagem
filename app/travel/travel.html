@@ -10,32 +10,34 @@
       href="https://fonts.googleapis.com/css2?family=Pattaya&family=Poppins:wght@400;500&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="/assets/style/style-reserva.css" />
+    <link rel="stylesheet" href="assets/style/style-reserva.css" />
     <meta
       name="description"
       content="Travelly is a travel agency website that helps you pick out your holiday or vacation"
     />
     <meta name="robots" content="index,follow" />
-    <link rel="icon" href="icons/airplane.svg" />
+    <link rel="icon" href="assets/icons/airplane.svg" />
     <title>Travelly | Travelling Agency</title>
+    <base href="/empresa-viagem/">
+    <!-- <base href="/"> -->
   </head>
 
   <body>
     <header class="main-head">
       <nav>
-        <h1 id="logo"><a href="../index.html">Travelly</a></h1>
+        <h1 id="logo"><a href="index.html">Travelly</a></h1>
         
       </nav>
     </header>
     <header class="link">
       <ul>
-        <li><a href="../reservas/reservas.html">Rota</a></li>
-        <li><a href="../travel/travel.html">Horario</a></li>
-        <li><a href="../ticket/ticket.html">Ingresso</a></li>
+        <li><a href="reservas/itinerario.html">Rota</a></li>
+        <li><a href="travel/travel.html">Horario</a></li>
+        <li><a href="ticket/ticket.html">Ingresso</a></li>
       </ul>
     </header>
     <main class="booking">
-    <button class="show-modal">Horário</button>
+    <button class="show-modal">Criar Horário</button>
     
     
       <!-- 
@@ -48,7 +50,7 @@
       <button class="close-modal">&times;</button>
       <div class="form-wrapper">
         <header class="form-head">
-          <h2>Horário</h2>
+          <h2>Criar Horário</h2>
         </header>
         <form method="get">
           <div class="city-form">
@@ -76,8 +78,8 @@
    
    
   </main>
+  <h1 class="cardTitle">Horario</h1>
   <div class="tickets">
-    <h1>Tickets</h1>
   </div>
   
     <footer>
@@ -103,11 +105,10 @@
       </div>
     </footer>
   </main>
-  <script src="/app/model/itinerario.js"></script>
-  <script src="/app/model/ticket.js"></script>
-  <script src="/app/model/travel.js"></script>
-  <script src="/app/shared/constants.js"></script>
+  <script src="app/model/itinerario.js"></script>
+  <script src="app/model/ticket.js"></script>
+  <script src="app/model/travel.js"></script>
+  <script src="app/shared/constants.js"></script>
   <script src="travel.js"></script>
-  
 </body>
 </html>

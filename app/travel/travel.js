@@ -9,7 +9,7 @@ const itinerarioSelect = document.getElementById('itinerario-select');
 
 const btnsOpenModal = document.querySelector('.show-modal');
 
-let tickets = [];
+let itinerarys = JSON.parse(localStorage.getItem('ITINERARY'));
 let travels = [];
 
 function onSubmitItinerary(e) {
@@ -27,28 +27,47 @@ function onSubmitItinerary(e) {
   localStorage.setItem(TRAVEL_KEY, JSON.stringify(travels));
 }
 
-function listTickets() {
-  console.log(localStorage.getItem(TICKETS_KEY));
+function showTickets() {
+  function listItinerary(element) {
+    for (const i of itinerarys) {
+      if (element === i.id) return `${i.origem} - ${i.destino}`;
+    }
+  }
+  let cardBuffer = '';
+
+  for (const e of travels) {
+    let card = `<div class="card">
+      <h1>Horario</h1>
+      <p>${e.id}</p>
+      <h2>Partida:</h2>
+      <p>${e.dataPartida}</p>
+      <h2>chegada:</h2>
+      <p>${e.dataChegada}</p>
+      <h2>Itinerario ${+e.itinerarioId}<h2>
+      <p>${listItinerary(+e.itinerarioId)}</p>
+      
+      </div>`;
+
+    cardBuffer += card;
+  }
+  ticketHolder.innerHTML = cardBuffer;
 }
 
-window.onload = () => {
-  displayItinerary();
-  document.forms[0].onsubmit = onSubmitItinerary;
-};
-
 function displayItinerary() {
-  let itinerarys = JSON.parse(localStorage.getItem(ITINERARY_KEY));
   let optionsHTML = '';
 
   for (const e of itinerarys) {
     optionsHTML += `<option value="${e.id}">${e.origem} - ${e.destino}</option>`;
   }
   itinerarioSelect.innerHTML = optionsHTML;
-
-  console.log(optionsHTML);
 }
 
-function showTickets() {}
+window.onload = () => {
+  travels = JSON.parse(localStorage.getItem('TRAVEL'));
+  showTickets();
+  displayItinerary();
+  document.forms[0].onsubmit = onSubmitItinerary;
+};
 
 function closeModal() {
   modalIt.classList.add('hidden');
@@ -65,8 +84,6 @@ const openModal = function () {
 btnsOpenModal.addEventListener('click', openModal);
 
 btnCloseModal.onclick = closeModal;
-
-overlay.addEventListener('click', closeModal);
 
 document.addEventListener('keydown', (e) => {
   // console.log(e.key);

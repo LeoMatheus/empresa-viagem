@@ -16,12 +16,9 @@
 
     for (const e of itinerarys) {
       let card = `<div class="card">
-      <h1>Itinerario</h1>
-      <p>${e.id}</p>
-      <h2>Cidade Origem:</h2>
-      <p>${e.origem}</p>
-      <h2>Cidade Destino:</h2>
-      <p>${e.destino}</p>
+      <h1>Itinerario: ${e.id}</h1>
+      <h2>Cidade Origem: ${e.origem}</h2>
+      <h2>Cidade Destino: ${e.destino}</h2>
       </div>`;
 
       cardBuffer += card;

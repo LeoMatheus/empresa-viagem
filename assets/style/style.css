@@ -69,6 +69,18 @@ button:focus {
   outline-color: white;
 }
 
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
 .main-head {
   background: #131c27;
   color: white;
@@ -136,8 +148,8 @@ nav ul {
 
 .hero {
   min-height: 90vh;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(transparent)), url("./assets/img/landing-page.jpg");
-  background: linear-gradient(rgba(0, 0, 0, 0.5), transparent), url("./assets/img/landing-page.jpg");
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(transparent)), url("/assets/img/landing-page.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.5), transparent), url("/assets/img/landing-page.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
