@@ -1,59 +1,58 @@
-#locations{
-    min-height: 100vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.327), transparent), url("../img/new-york-page.png");
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    position: relative;
-    overflow: hidden;
+#locations {
+  min-height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.327), transparent),
+    url('../img/new-york-page.png');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
 }
 
-.locations-head{
-    width: 90%;
-    
-    margin: auto;
+.locations-head {
+  width: 90%;
 
-    h2{
-        padding: 1rem 0rem;
-        text-decoration: underline;
-        text-decoration-thickness: 0.5rem;
-    }
+  margin: auto;
 
-    h3{
-        padding: 4rem 0rem;
-        background: linear-gradient(#131c27, #663b34);
-        background-clip: border-box;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
+  h2 {
+    padding: 1rem 0rem;
+    text-decoration: underline;
+    text-decoration-thickness: 0.5rem;
+  }
+
+  h3 {
+    padding: 4rem 0rem;
+    background: linear-gradient(#131c27, #663b34);
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 }
 
-
-
-.cloud{
-    position: absolute;
-    top: 0%;
-    right: 0%;
-    pointer-events: none;
+.cloud {
+  position: absolute;
+  top: 0%;
+  right: 0%;
+  pointer-events: none;
 }
 
-.moving-cloud-1{
-    animation: cloudAnimation 3s infinite alternate ease-in-out;
+.moving-cloud-1 {
+  animation: cloudAnimation 3s infinite alternate ease-in-out;
 }
 
-.moving-cloud-2{
-    top: 15%;
-    z-index: -1;
-    opacity: 0.5;
-    animation: cloudAnimation 3.2s infinite alternate ease-in-out;
+.moving-cloud-2 {
+  top: 15%;
+  z-index: -1;
+  opacity: 0.5;
+  animation: cloudAnimation 3.2s infinite alternate ease-in-out;
 }
 
-@keyframes cloudAnimation{
-   from{
-        transform: translate(10%, -10%);
-   }
-   to{
-        transform: translate(0%, 0%);
-   }
+@keyframes cloudAnimation {
+  from {
+    transform: translate(10%, -10%);
+  }
+  to {
+    transform: translate(0%, 0%);
+  }
 }

@@ -5,6 +5,14 @@
           box-sizing: border-box;
 }
 
+input:invalid {
+  border: rgba(190, 107, 107, 0.705) solid 3px;
+}
+
+input:valid {
+  border: #6ee488 solid 3px;
+}
+
 html {
   font-size: 62.5%;
 }

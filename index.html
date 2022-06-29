@@ -54,10 +54,19 @@
       </section>
       <section id="benefits">
         <header class="benefit-head">
-          <h2>The Perfect Travel</h2>
+          <h2>The Perfect Italian Travel</h2>
           <h3>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora,
             error!
+            <br />
+            Lorem ipsum dolor sit amet.
+          </h3>
+
+          <h3>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo
+            facere aliquam a minus magni voluptatibus eos tempore nihil
+            repudiandae ad, facilis beatae ipsam unde doloremque perferendis
+            officiis voluptatum. Iusto, nulla!
             <br />
             Lorem ipsum dolor sit amet.
           </h3>
@@ -101,14 +110,24 @@
           <header class="form-head">
             <h2>Contact Us</h2>
           </header>
-          <form action="https://formspree.io/f/xleaywzo" method="POST">
+          <form method="get">
             <div class="name-form">
               <label for="name">Name:</label
               ><input id="name" type="text" name="name" required />
             </div>
             <div class="email-form">
               <label for="email">Email:</label
-              ><input id="email" type="email" name="_replyto" required />
+              ><input
+                id="email"
+                type="email"
+                name="email"
+                required
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+              />
+            </div>
+            <div class="cep-form">
+              <label for="cep">Cep:</label
+              ><input id="cep" type="cep" name="cep" required />
             </div>
             <button type="submit" value="Send">Submit</button>
           </form>
@@ -116,7 +135,7 @@
       </section>
       <footer>
         <div class="footer-wrapper">
-          <h5>Travelly &copy;</h5>
+          <h5 onclick="naoClickeNoSegredo()">Segredo &copy;</h5>
           <ul>
             <li>
               <a href="#" title="twitter-link"
@@ -137,6 +156,8 @@
         </div>
       </footer>
     </main>
+    <script src="assets/lib/js/jquery-3.6.0.min.js"></script>
+    <script src="assets/lib/js/jquery.mask.js"></script>
     <script src="app/shared/constants.js"></script>
     <script src="app/script.js"></script>
   </body>

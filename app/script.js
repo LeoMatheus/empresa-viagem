@@ -1,6 +1,10 @@
 'use strict';
 
 let header = document.querySelector('.main-head');
+let formEmail = document.forms[0];
+let nome = document.getElementById('name');
+
+console.log(formEmail);
 
 function welcome() {
   window.alert('Seja bem vindo ao nosso site');
@@ -28,6 +32,49 @@ let mudarCorHeader = function () {
 
 setInterval(mudarCorHeader, 2000);
 
+let aparecerTexto = function () {
+  $(this).find('p').fadeToggle('slow');
+};
+
+function armazenarNomeEEmail(a) {
+  return function (b) {
+    alert(`Nome: ${a} e e-mail: ${b} armazenados com sucesso`);
+  };
+}
+
+function naoClickeNoSegredo() {
+  alert('Não clique aqui é secreto!!');
+}
+
+nome.addEventListener('blur', (e) => {
+  if (nome.value === '') {
+    e.preventDefault();
+    console.log('Valor não pode ser vazio');
+  }
+});
+
+$('.email').bind('invalid', (e) => {
+  e.preventDefault();
+
+  this.setCustomValidity(this.validity.stepMismatch ? 'Um email válido!' : '');
+});
+
 window.onload = function () {
   // welcome();
+  $('.card').click(aparecerTexto);
+
+  formEmail.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    let nomeValor = nome.value;
+    let email = document.getElementById('email').value;
+
+    armazenarNomeEEmail(nomeValor)(email);
+  });
+
+  $('.benefit-head').click(function () {
+    $(this).find('h3').addClass('italics');
+  });
+
+  $('#cep').mask('00000-000');
 };

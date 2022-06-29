@@ -1,7 +1,7 @@
 #contact {
   min-height: 100vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.453), transparent),
-    url('assets/img/contact-mountain.png');
+  background: linear-gradient(rgba(0, 0, 0, 0.453), transparent);
+  // url('assets/img/contact-mountain.png');
   background-size: cover;
   background-repeat: no-repeat;
 
@@ -39,7 +39,8 @@
 }
 
 .name-form,
-.email-form {
+.email-form,
+.cep-form {
   padding: 3rem;
   text-align: center;
 }
