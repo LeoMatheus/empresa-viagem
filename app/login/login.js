@@ -3,7 +3,7 @@ function initializeUsers() {
   if (localStorage.getItem(USERNAME_KEY) != null) {
     return false;
   }
-
+  // guia de estilo usar notação literal
   const admin = {
     username: USERNAME_KEY,
     password: '123',
@@ -33,6 +33,8 @@ window.onload = function () {
   document.forms[0].onsubmit = function (e) {
     e.preventDefault();
 
+    // guia de estilo usar const inves de var
+    // guia de estilo usar palavras curtas
     const username = document.querySelector('#user').value;
     const password = document.querySelector('#psw').value;
 

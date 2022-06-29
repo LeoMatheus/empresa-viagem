@@ -9,6 +9,7 @@
 
   const btnsOpenModal = document.querySelector('.show-modal');
 
+  // guia de estilo iniciou com literal
   let itinerarys = [];
 
   function showTickets() {
@@ -42,6 +43,8 @@
 
     itinerarys = JSON.parse(localStorage.getItem('ITINERARY'));
     itinerarys = itinerarys === null ? [] : itinerarys;
+
+    // guia de estilo use o push
     itinerarys.push(itinerary);
     localStorage.setItem(ITINERARY_KEY, JSON.stringify(itinerarys));
 

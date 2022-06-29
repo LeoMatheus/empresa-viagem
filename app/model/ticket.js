@@ -7,4 +7,10 @@ class Ticket {
     this.cpf = cpf;
     this.valor = valor;
   }
+
+  // guia de estilo! metodos podem retornar this pra ajudar com encadeamento de metodo
+  setUsuario(user) {
+    this.user = user;
+    return this;
+  }
 }

@@ -23,6 +23,8 @@ function welcome() {
 // }, 1000);
 
 let mudarCorHeader = function () {
+  // guia de estilo usar '' para strings
+  // guia de estilo quebrar linha nas arrays
   let cores = ['#6A9CD9', '#B0C5DF', '#474F59', '#5177A6'];
 
   let i = Math.floor(Math.random() * cores.length);
@@ -59,6 +61,18 @@ $('.email').bind('invalid', (e) => {
   this.setCustomValidity(this.validity.stepMismatch ? 'Um email válido!' : '');
 });
 
+function aparecerCep() {
+  let cep = $('#cep').val();
+  let servico = `http://viacep.com.br/ws/${cep}/json/`;
+  $.get(servico, function (conteudo) {
+    console.log(conteudo);
+    // guia de estilo! nao usar concatenação em mensagens longas
+    // guia de estilo! utilizar template string e sem espaço entre as aspas
+    alert(`Cep correspondente a cidade: ${conteudo.localidade}, 
+    rua: ${conteudo.logradouro}, bairro: ${conteudo.bairro}`);
+  });
+}
+
 window.onload = function () {
   // welcome();
   $('.card').click(aparecerTexto);
@@ -70,6 +84,7 @@ window.onload = function () {
     let email = document.getElementById('email').value;
 
     armazenarNomeEEmail(nomeValor)(email);
+    aparecerCep();
   });
 
   $('.benefit-head').click(function () {
