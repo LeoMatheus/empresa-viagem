@@ -1,0 +1,128 @@
+.form-wrapper {
+  background: rgba(29, 40, 63, 0.664);
+  width: 100%;
+  color: white;
+  border-radius: 20px;
+
+  label {
+    margin: 0rem 3rem;
+  }
+
+  button {
+    width: 100%;
+    padding: 2rem;
+    margin-top: 8rem;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+
+  input {
+    padding: 1rem 3rem;
+  }
+}
+
+.form-head {
+  text-align: center;
+  padding: 3.4rem;
+}
+
+.number-people-form,
+.city-form,
+.date-form {
+  padding: 3rem;
+  text-align: center;
+}
+
+.number-people-form input {
+  width: 10%;
+}
+
+.show-modal {
+  font-size: 2rem;
+  font-weight: 600;
+  padding: 1.75rem 3.5rem;
+  margin: 2rem;
+  border: none;
+  background-color: #fff;
+  color: #444;
+  // border-radius: 10rem;
+  cursor: pointer;
+}
+
+.close-modal {
+  position: relative;
+  top: -50%;
+  left: 90%;
+  font-size: 5rem;
+  color: #333;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.hidden {
+  display: none;
+}
+
+.modal {
+  // position: relative;
+  // top: 50%;
+  // left: 50%;
+  // transform: translate(-50%, -50%);
+
+  background-color: white;
+  // padding: 2rem;
+  // border-radius: 15px;
+  // box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  // z-index: 10;
+}
+
+.tickets {
+  display: flex;
+  flex-wrap: wrap;
+
+  h1 {
+    font-size: 5rem;
+    padding: 10px;
+  }
+
+  h2 {
+    font-size: 3rem;
+    padding-bottom: 15px;
+  }
+  p {
+    font-size: 2rem;
+    padding: 0.3rem;
+  }
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  flex-wrap: wrap;
+
+  flex: 1 1 25rem;
+  min-height: 15vh;
+  margin: 2rem 5rem;
+  background: rgba(226, 94, 94, 0.781);
+
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+
+.select-btn {
+  padding: 1rem 3rem;
+  text-align: center;
+}
+
+.form-field {
+  padding: 3rem;
+  text-align: center;
+}
+
+.cardTitle {
+  background: rgb(169, 217, 236);
+  text-align: center;
+  font-size: 8rem;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}

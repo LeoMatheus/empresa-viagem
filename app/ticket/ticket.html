@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <base href="/empresa-viagem/">
+    <!-- <base href="/"> -->
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pattaya&family=Poppins:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/style/style-reserva.css" />
+    <meta
+      name="description"
+      content="Travelly is a travel agency website that helps you pick out your holiday or vacation"
+    />
+    <meta name="robots" content="index,follow" />
+    <link rel="icon" href="icons/airplane.svg" />
+    <title>Travelly | Travelling Agency</title>
+    
+  </head>
+
+  <body>
+    <header class="main-head">
+      <nav>
+        <h1 id="logo"><a href="index.html">Travelly</a></h1>
+        
+      </nav>
+    </header>
+    <header class="link">
+      <ul>
+        <li><a href="app/reservas/itinerario.html">Rota</a></li>
+        <li><a href="app/travel/travel.html">Horario</a></li>
+        <li><a href="app/ticket/ticket.html">Ingresso</a></li>
+      </ul>k
+    </header>
+    <main class="booking">
+    <button class="show-modal">Criar Ticket</button>
+    
+      <!-- 
+        Validação browser
+
+        validação costumizada
+
+      -->
+    <div class="modal hidden">
+      <button class="close-modal">&times;</button>
+      <div class="form-wrapper">
+        <header class="form-head">
+          <h2>Criar Ticket</h2>
+        </header>
+        <form method="get">
+          <div class="form-field">
+            <label for="nome"> Nome:</label
+            ><input id="nomeVar" type="text" name="nome" required />
+          </div>
+          
+          <div class="form-field">
+            <label for="cpf">CPF:</label
+            ><input id="cpf" type="text" name="cpf" required />
+          </div>
+          
+          <div class="form-field">
+            <label for="poltrona">poltrona:</label
+            ><input id="poltrona" type="number" min="1" name="poltrona" required />
+          </div>
+         
+          <div class="form-field">
+            <label for="valor">valor:</label
+            ><input id="valor" type="number" min="1" step="any" name="valor" required />
+          </div>
+
+          <div class="form-field">
+            <label for="travel-select">Horario e Itinerario:</label
+              ><select name="horarioItinerario" id="travel-select">
+              </select>
+          </div>
+
+          <button type="submit" value="Send">Submit</button>
+        </form>
+      </div>
+     
+    
+   
+   
+  </main>
+  <h1 class="cardTitle">Ticket</h1>
+  <div class="tickets">
+    <h1>Tickets</h1>
+  </div>
+  
+    <footer>
+      <div class="footer-wrapper">
+        <h5>Travelly &copy;</h5>
+        <ul>
+          <li>
+            <a href="#" title="twitter-link"
+              ><img src="assets/icons/twitter.svg" alt="tiwtter-link"
+            /></a>
+          </li>
+          <li>
+            <a href="#" title="youtube-link"
+              ><img src="assets/icons/youtube.svg" alt="youtube-link"
+            /></a>
+          </li>
+          <li>
+            <a href="#" title="instagram-link"
+              ><img src="assets/icons/instagram.svg" alt="instagram-link"
+            /></a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+  </main>
+  <script src="app/model/itinerario.js"></script>
+  <script src="app/model/ticket.js"></script>
+  <script src="app/shared/constants.js"></script>
+  <script src="app/ticket/ticket.js"></script>
+  
+</body>
+</html>
