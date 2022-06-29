@@ -10,17 +10,17 @@ function welcome() {
   window.alert('Seja bem vindo ao nosso site');
 }
 
-// setTimeout(() => {
-//   if (window.confirm('Gostaria de receber promoções e pacotes de viagem?')) {
-//     let email = window.prompt('Nos informe seu email');
+setTimeout(() => {
+  if (window.confirm('Gostaria de receber promoções e pacotes de viagem?')) {
+    let email = window.prompt('Nos informe seu email');
 
-//     if (email !== null) {
-//       window.alert('Email cadastrado com sucesso');
-//     } else {
-//       window.alert('Campo Vazio');
-//     }
-//   }
-// }, 1000);
+    if (email !== null) {
+      window.alert('Email cadastrado com sucesso');
+    } else {
+      window.alert('Campo Vazio');
+    }
+  }
+}, 1000);
 
 let mudarCorHeader = function () {
   // guia de estilo usar '' para strings
@@ -74,7 +74,7 @@ function aparecerCep() {
 }
 
 window.onload = function () {
-  // welcome();
+  welcome();
   $('.card').click(aparecerTexto);
 
   formEmail.addEventListener('submit', (e) => {
